@@ -22,6 +22,10 @@ RSpec.describe NotesController, type: :controller do
     end
 
     it "should return the created note in the response body" do
+      post :create, params: { note: {title: 'First', content: 'Hello'} }
+      json = JSON.parse(response.body)
+      expect(json['title']).to eq('First')
+      expect(json['content']).to eq('Hello')
     end
   end
 end
