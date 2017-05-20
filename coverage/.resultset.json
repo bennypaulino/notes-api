@@ -8,7 +8,7 @@
         1,
         1,
         1,
-        0,
+        1,
         null,
         null,
         null
@@ -251,6 +251,8 @@
       ],
       "/home/benny/workspace/notes-api/app/controllers/notes_controller.rb": [
         1,
+        1,
+        null,
         null
       ],
       "/home/benny/workspace/notes-api/app/controllers/application_controller.rb": [
@@ -258,6 +260,6 @@
         null
       ]
     },
-    "timestamp": 1495251267
+    "timestamp": 1495251478
   }
 }
