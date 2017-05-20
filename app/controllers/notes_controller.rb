@@ -4,8 +4,12 @@ class NotesController < ApplicationController
 
   def create
     note = Note.create(note_params)
-    # render saved note as JSON & respond w/status :created (HTTP code 201)
-    render json: note, status: :created
+    if note.valid?
+      # render note as JSON & respond w/status :created (HTTP code 201)
+      render json: note, status: :created
+    else
+      render status: :unprocessable_entity
+    end
   end
 
   private
