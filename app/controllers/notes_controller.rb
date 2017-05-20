@@ -8,7 +8,7 @@ class NotesController < ApplicationController
       # render note as JSON & respond w/status :created (HTTP code 201)
       render json: note, status: :created
     else
-      render status: :unprocessable_entity
+      render json: render_errors(note), status: :unprocessable_entity
     end
   end
 
@@ -16,5 +16,9 @@ class NotesController < ApplicationController
 
   def note_params
     params.require(:note).permit(:title, :content)
+  end
+
+  def render_errors(note)
+    { errors: note.errors }
   end
 end
