@@ -28,5 +28,5 @@ Travis CI configuration how-to and example:
 
 Coveralls how-to:
 - [Installation & Configuration](https://coveralls.zendesk.com/hc/en-us/articles/201769485-Ruby-Rails)
-- [Coveralls Statistics for TimeTracker!](https://coveralls.io/github/bennypaulino/notes-api)
-- Coveralls badge for TimeTracker: [![Coverage Status](https://coveralls.io/repos/github/bennypaulino/notes-api/badge.svg?branch=master)](https://coveralls.io/github/bennypaulino/notes-api?branch=master)
+- [Coveralls Statistics for notes-api!](https://coveralls.io/github/bennypaulino/notes-api)
+- Coveralls badge for notes-api: [![Coverage Status](https://coveralls.io/repos/github/bennypaulino/notes-api/badge.svg?branch=master)](https://coveralls.io/github/bennypaulino/notes-api?branch=master)
