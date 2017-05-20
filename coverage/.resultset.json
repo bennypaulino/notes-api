@@ -15,7 +15,13 @@
         1,
         1,
         1,
-        0,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
         null,
         null,
         null
@@ -260,6 +266,9 @@
         1,
         1,
         null,
+        null,
+        1,
+        null,
         null
       ],
       "/home/benny/workspace/notes-api/app/controllers/application_controller.rb": [
@@ -270,7 +279,7 @@
         1,
         null,
         1,
-        1,
+        null,
         null
       ],
       "/home/benny/workspace/notes-api/app/models/note.rb": [
@@ -283,6 +292,6 @@
         null
       ]
     },
-    "timestamp": 1495290059
+    "timestamp": 1495290923
   }
 }
