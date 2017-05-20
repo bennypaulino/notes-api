@@ -1,5 +1,12 @@
 # README
 
+RESTful API that outputs JSON.
+
+Handling of validation errors when creating or updating entities. If this happens, an HTTP status code of 422 or unprocessable_entity will be produced.
+
+Deletion requests will produce a status code of 204 or no_content when elements are successfully removed.
+
+Resources not found will result in the HTTP status code of 404 or not_found.
 
 ### Built with Ruby on Rails
 
