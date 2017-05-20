@@ -40,6 +40,11 @@
         1,
         null,
         null,
+        1,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/home/benny/workspace/notes-api/spec/rails_helper.rb": [
@@ -284,10 +289,10 @@
         null,
         null,
         1,
-        4,
-        4,
+        5,
+        5,
         null,
-        3,
+        4,
         null,
         1,
         null,
@@ -296,7 +301,7 @@
         1,
         null,
         1,
-        4,
+        5,
         null,
         null
       ],
@@ -322,6 +327,6 @@
         null
       ]
     },
-    "timestamp": 1495301671
+    "timestamp": 1495304441
   }
 }
