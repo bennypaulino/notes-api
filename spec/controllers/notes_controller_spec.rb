@@ -15,6 +15,10 @@ RSpec.describe NotesController, type: :controller do
     end
 
     it "should successfully create & save new note in the database" do
+      post :create, params: { note: {title: 'First', content: 'Hello'} }
+      note = Note.last
+      expect(note.content).to eq('Hello')
+      expect(note.title).to eq('First')
     end
 
     it "should return the created note in the response body" do
