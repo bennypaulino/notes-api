@@ -11,6 +11,13 @@
         1,
         null,
         null,
+        null,
+        1,
+        1,
+        1,
+        0,
+        null,
+        null,
         null
       ],
       "/home/benny/workspace/notes-api/spec/rails_helper.rb": [
@@ -258,8 +265,24 @@
       "/home/benny/workspace/notes-api/app/controllers/application_controller.rb": [
         1,
         null
+      ],
+      "/home/benny/workspace/notes-api/spec/models/note_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/home/benny/workspace/notes-api/app/models/note.rb": [
+        1,
+        null
+      ],
+      "/home/benny/workspace/notes-api/app/models/application_record.rb": [
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1495251896
+    "timestamp": 1495290059
   }
 }
