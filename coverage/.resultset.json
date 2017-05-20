@@ -292,9 +292,9 @@
         5,
         5,
         null,
-        4,
+        3,
         null,
-        1,
+        2,
         null,
         null,
         null,
@@ -319,6 +319,7 @@
       "/home/benny/workspace/notes-api/app/models/note.rb": [
         1,
         1,
+        1,
         null
       ],
       "/home/benny/workspace/notes-api/app/models/application_record.rb": [
@@ -327,6 +328,6 @@
         null
       ]
     },
-    "timestamp": 1495304441
+    "timestamp": 1495304592
   }
 }
