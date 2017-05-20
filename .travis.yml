@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-  - 2.3.4
+  - 2.2.0
 
 sudo: required
 
@@ -9,7 +9,7 @@ services:
 
 before_script:
   - cp config/database.yml.travis config/database.yml
-  - psql -c 'create database travis_ci_test;' -U postgres
+  - psql -c 'create database notes_api_test;' -U postgres
   - bin/rake db:migrate RAILS_ENV=test
 
 script:
