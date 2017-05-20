@@ -3,9 +3,10 @@
 
 ### Built with Ruby on Rails
 
-* Ruby 2.3.3
-* Rails 4.2.8
+* Ruby 2.3.4
+* Rails 5.1.1
 * PostgreSQL
+* RSpec
 * Travis CI
 * Coveralls
 
