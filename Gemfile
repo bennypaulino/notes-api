@@ -32,6 +32,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5'
   # Evaluate test coverage.
   gem 'coveralls', require: false
+  # Replaces fixtures in tests.
+  gem 'factory_girl_rails', '~> 4.0'
 end
 
 group :development do

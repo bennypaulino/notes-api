@@ -11,6 +11,15 @@
         1,
         null,
         null,
+        1,
+        1,
+        2,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
         null,
         1,
         1,
@@ -285,6 +294,25 @@
         null,
         null
       ],
+      "/home/benny/workspace/notes-api/spec/factories/notes.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/benny/workspace/notes-api/app/models/note.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/home/benny/workspace/notes-api/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
       "/home/benny/workspace/notes-api/config/routes.rb": [
         1,
         1,
@@ -293,6 +321,8 @@
       "/home/benny/workspace/notes-api/app/controllers/notes_controller.rb": [
         1,
         1,
+        2,
+        2,
         null,
         null,
         1,
@@ -326,19 +356,8 @@
         1,
         null,
         null
-      ],
-      "/home/benny/workspace/notes-api/app/models/note.rb": [
-        1,
-        1,
-        1,
-        null
-      ],
-      "/home/benny/workspace/notes-api/app/models/application_record.rb": [
-        1,
-        1,
-        null
       ]
     },
-    "timestamp": 1495305645
+    "timestamp": 1495321142
   }
 }

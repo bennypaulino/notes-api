@@ -16,6 +16,7 @@ Resources not found will result in the HTTP status code of 404 or not_found.
 * RSpec
 * Travis CI
 * Coveralls
+* FactoryGirl
 
 ### Automated Continuous Integration with Travis CI
 
