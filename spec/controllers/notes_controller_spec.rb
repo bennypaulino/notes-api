@@ -114,7 +114,8 @@ RSpec.describe NotesController, type: :controller do
     it "should destroy a saved note" do
       note = FactoryGirl.create(:note)
       delete :destroy, params: { id: note.id }
-      note = find_by_id(note.id)
+      # find vs find_by_id - find will raise an exception vs returning nil
+      note = Note.find_by_id(note.id)
       expect(note).to eq nil
     end
   end
