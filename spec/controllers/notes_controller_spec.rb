@@ -21,7 +21,7 @@ RSpec.describe NotesController, type: :controller do
       tag = FactoryGirl.create(:tag, note_id: note.id)
       get :index
       json = JSON.parse(response.body)
-      expect(json[0]['tags']['name']).to eq(tag.name)
+      expect(json[0]['tags'][0]['name']).to eq(tag.name)
     end
   end
 
