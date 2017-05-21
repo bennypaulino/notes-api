@@ -118,5 +118,11 @@ RSpec.describe NotesController, type: :controller do
       note = Note.find_by_id(note.id)
       expect(note).to eq nil
     end
+
+    it "should return no_content status" do
+      note = FactoryGirl.create(:note)
+      delete :destroy, params: { id: note.id }
+      expect(response).to have_http_status(:no_content)
+    end
   end
 end
