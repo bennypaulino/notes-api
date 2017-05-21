@@ -66,4 +66,19 @@ RSpec.describe NotesController, type: :controller do
       expect(json['id']).to eq(note.id)
     end
   end
+
+  describe "notes#update action" do
+    it "should receive the updated note in response" do
+      note = FactoryGirl.create(:note)
+      put :update, params: { id: note.id,
+                             note: { title: 'Updated Note',
+                                     content: 'This note has been updated.'
+                                    }
+                            }
+      json = JSON.parse(response.body)
+      expect(json['title']).to eq('Updated Note')
+      expect(json['content']).to eq('This note has been updated.')
+      expect(response).to be_success
+    end
+  end
 end
