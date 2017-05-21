@@ -68,13 +68,17 @@ RSpec.describe NotesController, type: :controller do
   end
 
   describe "notes#update action" do
+    before do
+      @note = FactoryGirl.create(:note)
+    end
+
     it "should receive the updated note in response" do
-      note = FactoryGirl.create(:note)
-      put :update, params: { id: note.id,
+      put :update, params: { id: @note.id,
                              note: { title: 'Updated Note',
                                      content: 'This note has been updated.'
                                     }
                             }
+
       json = JSON.parse(response.body)
       expect(json['title']).to eq('Updated Note')
       expect(json['content']).to eq('This note has been updated.')
@@ -82,23 +86,24 @@ RSpec.describe NotesController, type: :controller do
     end
 
     it "should properly deal with validation errors for empty title" do
-      note = FactoryGirl.create(:note)
-      put :update, params: { id: note.id,
+      put :update, params: { id: @note.id,
                              note: { title: '', content: 'missing title' }
                            }
       expect(response).to have_http_status(:unprocessable_entity)
     end
 
     it "should properly deal with validation errors for empty content" do
-      note = FactoryGirl.create(:note)
-      put :update, params: { id: note.id,
-                              note: { title: 'No Comment', content: '' } }
+      put :update, params: { id: @note.id,
+                             note: { title: 'No Comment', content: '' }
+                           }
       expect(response).to have_http_status(:unprocessable_entity)
     end
 
     it "should return error JSON on validation error" do
-      note = FactoryGirl.create(:note)
-      put :update, params: { id: note.id, note: {title: '', content: '' } }
+      put :update, params: { id: @note.id,
+                             note: { title: '', content: '' }
+                           }
+
       json = JSON.parse(response.body)
       expect(json["errors"]["title"][0]).to eq("can't be blank")
       expect(json["errors"]["content"][0]).to eq("can't be blank")
