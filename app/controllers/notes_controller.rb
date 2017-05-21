@@ -24,7 +24,7 @@ class NotesController < ApplicationController
     if note.update_attributes(note_params)
       render json: note, status: :ok
     else
-      render status: :unprocessable_entity
+      render json: render_errors(note), status: :unprocessable_entity
     end
   end
 
