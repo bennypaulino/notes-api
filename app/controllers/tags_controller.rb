@@ -8,6 +8,9 @@ class TagsController < ApplicationController
   end
 
   def destroy
+    tag = Tag.find_by_id(params[:id])
+    tag.destroy
+    head :no_content
   end
 
   private
