@@ -7,6 +7,9 @@ class TagsController < ApplicationController
     end
   end
 
+  def destroy
+  end
+
   private
 
   def tag_params

@@ -37,7 +37,7 @@ RSpec.describe TagsController, type: :controller do
       note = FactoryGirl.create(:note)
       tag = FactoryGirl.create(:tag, note_id: note.id)
       delete :destroy, params: { id: tag.id }
-      expect(status).to be_success
+      expect(response).to be_success
     end
   end
 end
