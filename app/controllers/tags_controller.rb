@@ -1,9 +1,9 @@
 class TagsController < ApplicationController
   def create
     note = Note.find_by_id(params[:note_id])
-    note.tags.create(tag_params)
-    if note.invalid?
-      render status: :unprocessable_entity
+    tag = note.tags.create(tag_params)
+    if tag.invalid?
+      render json: render_errors(tag), status: :unprocessable_entity
     end
   end
 
@@ -11,5 +11,9 @@ class TagsController < ApplicationController
 
   def tag_params
     params.require(:tag).permit(:name)
+  end
+
+  def render_errors(tag)
+    { errors: tag.errors }
   end
 end
