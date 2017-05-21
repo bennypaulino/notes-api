@@ -23,6 +23,8 @@ class NotesController < ApplicationController
     note = Note.find_by_id(params[:id])
     if note.update_attributes(note_params)
       render json: note, status: :ok
+    else
+      render status: :unprocessable_entity
     end
   end
 
