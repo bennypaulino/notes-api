@@ -80,5 +80,20 @@ RSpec.describe NotesController, type: :controller do
       expect(json['content']).to eq('This note has been updated.')
       expect(response).to be_success
     end
+
+    it "should properly deal with validation errors for empty title" do
+      note = FactoryGirl.create(:note)
+      put :update, params: { id: note.id,
+                             note: { title: '', content: 'missing title' }
+                           }
+      expect(response).to have_http_status(:unprocessable_entity)
+    end
+
+    it "should properly deal with validation errors for empty content" do
+      note = FactoryGirl.create(:note)
+      put :update, params: { id: note.id,
+                              note: { title: 'No Comment', content: '' } }
+      expect(response).to have_http_status(:unprocessable_entity)
+    end
   end
 end
