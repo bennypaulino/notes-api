@@ -15,6 +15,14 @@ RSpec.describe NotesController, type: :controller do
       json = JSON.parse(response.body)
       expect(json[0]['id'] < json[1]['id']).to be true
     end
+
+    it "should include associated tags in response" do
+      note = FactoryGirl.create(:note)
+      tag = FactoryGirl.create(:tag, note_id: note.id)
+      get :index
+      json = JSON.parse(response.body)
+      expect(json[0]['tags']['name']).to eq(tag.name)
+    end
   end
 
   describe "notes#create action" do
