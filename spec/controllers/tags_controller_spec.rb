@@ -39,5 +39,13 @@ RSpec.describe TagsController, type: :controller do
       delete :destroy, params: { id: tag.id }
       expect(response).to be_success
     end
+
+    it "should remove a tag from the database" do
+      note = FactoryGirl.create(:note)
+      tag = FactoryGirl.create(:tag, note_id: note.id)
+      delete :destroy, params: { id: tag.id }
+      deleted_tag = Tag.find_by_id(tag.id)
+      expect(deleted_tag).to eq nil
+    end
   end
 end
