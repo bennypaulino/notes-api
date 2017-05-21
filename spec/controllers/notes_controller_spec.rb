@@ -95,5 +95,13 @@ RSpec.describe NotesController, type: :controller do
                               note: { title: 'No Comment', content: '' } }
       expect(response).to have_http_status(:unprocessable_entity)
     end
+
+    it "should return error JSON on validation error" do
+      note = FactoryGirl.create(:note)
+      put :update, params: { id: note.id, note: {title: '', content: '' } }
+      json = JSON.parse(response.body)
+      expect(json["errors"]["title"][0]).to eq("can't be blank")
+      expect(json["errors"]["content"][0]).to eq("can't be blank")
+    end
   end
 end
