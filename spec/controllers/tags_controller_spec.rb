@@ -7,5 +7,11 @@ RSpec.describe TagsController, type: :controller do
       post :create, params: { tag: { name: 'shiny' }, note_id: note.id }
       expect(response).to be_success
     end
+
+    it "should successfully create and save a new tag in the database" do
+      note = FactoryGirl.create(:note)
+      post :create, params: { tag: { name: 'shiny' }, note_id: note.id }
+      expect(note.tags.first.name).to eq('shiny')
+    end
   end
 end
