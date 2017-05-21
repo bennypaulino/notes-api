@@ -109,4 +109,13 @@ RSpec.describe NotesController, type: :controller do
       expect(json["errors"]["content"][0]).to eq("can't be blank")
     end
   end
+
+  describe "notes#destroy action" do
+    it "should destroy a saved note" do
+      note = FactoryGirl.create(:note)
+      delete :destroy, params: { id: note.id }
+      note = find_by_id(note.id)
+      expect(note).to eq nil
+    end
+  end
 end
