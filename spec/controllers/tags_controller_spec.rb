@@ -33,18 +33,18 @@ RSpec.describe TagsController, type: :controller do
   end
 
   describe "tags#destroy action" do
-    it "should return 200 status-code" do
+    before do
       note = FactoryGirl.create(:note)
-      tag = FactoryGirl.create(:tag, note_id: note.id)
-      delete :destroy, params: { id: tag.id }
+      @tag = FactoryGirl.create(:tag, note_id: note.id)
+      delete :destroy, params: { id: @tag.id }
+    end
+
+    it "should return 200 status-code" do
       expect(response).to be_success
     end
 
     it "should remove a tag from the database" do
-      note = FactoryGirl.create(:note)
-      tag = FactoryGirl.create(:tag, note_id: note.id)
-      delete :destroy, params: { id: tag.id }
-      deleted_tag = Tag.find_by_id(tag.id)
+      deleted_tag = Tag.find_by_id(@tag.id)
       expect(deleted_tag).to eq nil
     end
   end
