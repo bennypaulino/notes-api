@@ -1,6 +1,6 @@
 # README
 
-RESTful API that outputs JSON.
+RESTful API that outputs JSON. This project is the back-end for [react-note-app](https://github.com/bennypaulino/react-note-app).
 
 Handling of validation errors when creating or updating entities. If this happens, an HTTP status code of 422 or unprocessable_entity will be produced.
 
